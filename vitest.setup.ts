@@ -23,3 +23,19 @@ Object.defineProperty(window, 'scrollTo', {
   value: () => {},
   writable: true,
 });
+
+// Mock window.matchMedia for GSAP ScrollTrigger
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: (query: string) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: () => {},
+    removeListener: () => {},
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    dispatchEvent: () => true,
+  }),
+});
+

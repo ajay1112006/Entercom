@@ -15,7 +15,7 @@ vi.mock('framer-motion', async () => {
 describe('ProjectsPage Component', () => {
   it('renders project list and category filters', () => {
     render(<ProjectsPage />);
-    expect(screen.getByText('Client Work & Case Studies')).toBeInTheDocument();
+    expect(screen.getByText(/Portfolio Showcase/i)).toBeInTheDocument();
     expect(screen.getByText('Aetheris Horizon')).toBeInTheDocument();
     expect(screen.getByText('PulsePay Global')).toBeInTheDocument();
   });

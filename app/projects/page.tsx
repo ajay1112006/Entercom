@@ -8,6 +8,8 @@ import { ProjectCard } from '@/components/ProjectCard';
 import { ProjectModal } from '@/components/ProjectModal';
 import { Badge } from '@/components/ui/Badge';
 import { Project } from '@/types';
+import { ThreeDTextReveal } from '@/components/ThreeDTextReveal';
+import { ScrollReveal } from '@/components/ScrollReveal';
 
 const CATEGORIES = ['All', 'SaaS', 'E-Commerce', 'Web3', 'Studio', 'Enterprise'];
 
@@ -34,15 +36,21 @@ export default function ProjectsPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12 pb-24">
       {/* Header Banner */}
-      <div className="space-y-4 max-w-3xl">
-        <Badge variant="purple">Portfolio Showcase</Badge>
-        <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight font-display">
-          Client Work & Case Studies
-        </h1>
-        <p className="text-white/70 text-base sm:text-lg leading-relaxed">
-          Explore the bespoke web applications, e-commerce stores, and high-performance landing experiences we have engineered for clients.
-        </p>
-      </div>
+      <ScrollReveal direction="up" blur={4}>
+        <div className="space-y-4 max-w-3xl">
+          <Badge variant="purple">Portfolio Showcase</Badge>
+          <ThreeDTextReveal
+            text="Client Work & Case Studies"
+            as="h1"
+            className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight font-display"
+            rotationX={-75}
+            stagger={0.04}
+          />
+          <p className="text-white/70 text-base sm:text-lg leading-relaxed">
+            Explore the bespoke web applications, e-commerce stores, and high-performance landing experiences we have engineered for clients.
+          </p>
+        </div>
+      </ScrollReveal>
 
       {/* Filter and Search Bar */}
       <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 p-4 rounded-2xl bg-surface-card border border-surface-border">

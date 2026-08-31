@@ -62,3 +62,11 @@
   background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 32px 32px;
 }
+
+/* Hide default cursor on desktop devices with custom scope cursor */
+@media (pointer: fine) {
+  *, html, body, a, button, input, textarea, select, label, [role="button"] {
+    cursor: none !important;
+  }
+}
+

@@ -4,6 +4,8 @@ import React from 'react';
 import { Badge } from '@/components/ui/Badge';
 import { ContactForm } from '@/components/ContactForm';
 import { Mail, Clock, MapPin, MessageSquare, CheckCircle } from 'lucide-react';
+import { ThreeDTextReveal } from '@/components/ThreeDTextReveal';
+import { ScrollReveal } from '@/components/ScrollReveal';
 
 const FAQS = [
   {
@@ -24,15 +26,21 @@ export default function ContactPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16 pb-24">
       {/* Header */}
-      <div className="space-y-4 max-w-3xl">
-        <Badge variant="purple">Get in Touch</Badge>
-        <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight font-display">
-          Let&apos;s Build Something Extraordinary
-        </h1>
-        <p className="text-white/70 text-base sm:text-lg leading-relaxed">
-          Ready to kick off your next website project? Fill out the project brief below or reach out directly to schedule a strategy call.
-        </p>
-      </div>
+      <ScrollReveal direction="up" blur={4}>
+        <div className="space-y-4 max-w-3xl">
+          <Badge variant="purple">Get in Touch</Badge>
+          <ThreeDTextReveal
+            text="Let's Build Something Extraordinary"
+            as="h1"
+            className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight font-display"
+            rotationX={-75}
+            stagger={0.04}
+          />
+          <p className="text-white/70 text-base sm:text-lg leading-relaxed">
+            Ready to kick off your next website project? Fill out the project brief below or reach out directly to schedule a strategy call.
+          </p>
+        </div>
+      </ScrollReveal>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         {/* Left Column: Form */}

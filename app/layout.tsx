@@ -5,6 +5,7 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Floating3DBackground } from '@/components/Floating3DBackground';
 import { SideRays } from '@/components/SideRays';
+import { ScopeCursor } from '@/components/ScopeCursor';
 
 const interTight = Inter_Tight({
   subsets: ['latin'],
@@ -61,6 +62,9 @@ export default function RootLayout({
       className={`${interTight.variable} ${spaceGrotesk.variable} ${spaceMono.variable} dark scroll-smooth`}
     >
       <body className="bg-background text-white min-h-screen flex flex-col antialiased selection:bg-indigo-500 selection:text-white font-sans">
+        {/* Tactical Scope Target Cursor */}
+        <ScopeCursor />
+
         {/* Volumetric WebGL Side Rays Background */}
         <div className="fixed inset-0 pointer-events-none z-0">
           <SideRays
