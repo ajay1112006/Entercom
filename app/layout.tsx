@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer';
 import { Floating3DBackground } from '@/components/Floating3DBackground';
 import { SideRays } from '@/components/SideRays';
 import { ScopeCursor } from '@/components/ScopeCursor';
+import { LoadingScreen } from '@/components/LoadingScreen';
 
 const interTight = Inter_Tight({
   subsets: ['latin'],
@@ -62,6 +63,9 @@ export default function RootLayout({
       className={`${interTight.variable} ${spaceGrotesk.variable} ${spaceMono.variable} dark scroll-smooth`}
     >
       <body className="bg-background text-white min-h-screen flex flex-col antialiased selection:bg-indigo-500 selection:text-white font-sans">
+        {/* Intro Entercom Loading Screen */}
+        <LoadingScreen />
+
         {/* Tactical Scope Target Cursor */}
         <ScopeCursor />
 

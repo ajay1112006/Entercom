@@ -30,26 +30,11 @@ export function Navbar() {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-8">
       <div className="max-w-7xl mx-auto flex items-center justify-between relative">
-        {/* Left Corner: Floating Logo & Dual-Tone Entercom Title */}
+        {/* Left Corner: Entercom Title */}
         <Link
           href="/"
-          className="flex items-center gap-1 sm:gap-1.5 group hover:opacity-90 transition-opacity"
+          className="flex items-center group hover:opacity-90 transition-opacity"
         >
-          <motion.div
-            animate={{ y: [0, -6, 0] }}
-            transition={{
-              duration: 3.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-            className="flex items-center justify-center shrink-0"
-          >
-            <img
-              src="/logo.png"
-              alt="Entercom Logo"
-              className="w-auto h-16 sm:h-20 lg:h-22 object-contain drop-shadow-[0_10px_25px_rgba(99,102,241,0.5)] group-hover:scale-105 transition-transform"
-            />
-          </motion.div>
           <span className="text-2xl sm:text-3xl font-extrabold tracking-tight font-display leading-none flex items-center">
             <span className="text-white">Enter</span>
             <span className="text-indigo-400 group-hover:text-indigo-300 transition-colors">com</span>

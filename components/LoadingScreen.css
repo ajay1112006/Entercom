@@ -1,0 +1,88 @@
+/* Code-Recreated Load Animation Styles */
+
+.load-grid-bg {
+  background-color: #ebf0ec;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Water Ripple Animation */
+@keyframes water-ripple {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    border-width: 3px;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    width: 600px;
+    height: 600px;
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+.ripple-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-color: rgba(99, 102, 241, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: water-ripple 2.4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+}
+
+.ripple-ring-2 {
+  animation-delay: 0.6s;
+}
+
+.ripple-ring-3 {
+  animation-delay: 1.2s;
+}
+
+/* 3D Extruded Text Shadow */
+.text-3d-navy {
+  color: #1e293b;
+  text-shadow: 
+    0 1px 0 #0f172a,
+    0 2px 0 #0f172a,
+    0 3px 0 #0f172a,
+    0 4px 0 #0f172a,
+    0 6px 12px rgba(15, 23, 42, 0.3);
+}
+
+/* Metallic Pill Bar Styling */
+.pill-bar-track {
+  background: #dbe2dd;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.pill-bar-fill {
+  background: linear-gradient(180deg, #312e81 0%, #1e1b4b 100%);
+  box-shadow: 
+    0 2px 8px rgba(30, 27, 75, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+/* Click Wave */
+@keyframes click-pop {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.click-wave {
+  animation: click-pop 0.5s ease-out forwards;
+}
