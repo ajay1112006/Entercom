@@ -240,9 +240,22 @@ export default function HomePage() {
                 fontWeight={900}
               />
             </div>
-            <p className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed font-normal pt-4">
-              Entercom is a specialized web agency. We design and engineer production-ready, animation-rich Next.js websites for startups and ambitious brands.
-            </p>
+            <div className="w-full max-w-4xl mx-auto pt-2 h-16 sm:h-20 relative">
+              <WarpText
+                text={"Entercom is a specialized web agency. We design and engineer production-ready,\nanimation-rich Next.js websites for startups and ambitious brands."}
+                color="#ffffff"
+                fontSize="clamp(0.95rem, 1.8vw, 1.15rem)"
+                fontWeight={500}
+                fontFamily="Inter, sans-serif"
+                lineHeight="28px"
+                letterSpacing="0.01em"
+                warpStrength={0.06}
+                warpScale={1.6}
+                speed={0.45}
+                pointerInfluence={0.35}
+                pointerStrength={0.32}
+              />
+            </div>
           </motion.div>
 
           {/* Hero CTAs */}

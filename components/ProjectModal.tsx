@@ -89,22 +89,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               </div>
             </div>
 
-            {/* Metrics Grid */}
-            {project.metrics && project.metrics.length > 0 && (
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                {project.metrics.map((m, idx) => (
-                  <div
-                    key={idx}
-                    className="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.06] text-center"
-                  >
-                    <span className="block text-xl font-extrabold font-mono text-emerald-400">
-                      {m.value}
-                    </span>
-                    <span className="text-xs font-mono text-white/50">{m.label}</span>
-                  </div>
-                ))}
-              </div>
-            )}
 
             {/* Overview */}
             <div className="space-y-2">

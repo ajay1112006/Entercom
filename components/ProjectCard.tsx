@@ -64,18 +64,6 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
           </p>
         </div>
 
-        {/* Key Metric Banner */}
-        {project.metrics && project.metrics.length > 0 && (
-          <div className="p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-between text-xs">
-            <span className="text-white/50 flex items-center gap-1.5 font-medium">
-              <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
-              {project.metrics[0].label}
-            </span>
-            <span className="font-mono font-bold text-emerald-400">
-              {project.metrics[0].value}
-            </span>
-          </div>
-        )}
 
         {/* Tech Stack Tags */}
         <div className="flex flex-wrap gap-1.5 pt-1">

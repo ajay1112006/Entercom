@@ -422,24 +422,6 @@ const ScrollExpand: React.FC<ScrollExpandProps> = ({
                           </p>
                         </div>
 
-                        {/* Metrics Row */}
-                        {proj.metrics && proj.metrics.length > 0 && (
-                          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
-                            {proj.metrics.map((metric, mIdx) => (
-                              <div
-                                key={mIdx}
-                                className="p-3.5 rounded-2xl bg-black/60 border border-white/15 backdrop-blur-md space-y-1"
-                              >
-                                <span className="text-[11px] font-mono text-white/50 block uppercase tracking-wider">
-                                  {metric.label}
-                                </span>
-                                <span className="text-lg sm:text-xl font-bold font-mono text-emerald-400">
-                                  {metric.value}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
-                        )}
                       </div>
 
                       {/* Bottom Bar */}

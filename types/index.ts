@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   slug: string;
-  category: 'SaaS' | 'E-Commerce' | 'Web3' | 'Studio' | 'Enterprise';
+  category: 'SaaS' | 'E-Commerce' | 'Web3' | 'Studio' | 'Enterprise' | 'EdTech & AI' | 'Fintech & Logistics';
   client: string;
   description: string;
   fullDescription: string;

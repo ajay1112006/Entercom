@@ -1,11 +1,8 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { Github, Twitter, Linkedin, Dribbble } from 'lucide-react';
 import { TeamMember } from '../types';
-import { Card } from './ui/Card';
+import { BorderGlow } from './BorderGlow';
 
 interface TeamCardProps {
   member: TeamMember;
@@ -13,7 +10,16 @@ interface TeamCardProps {
 
 export function TeamCard({ member }: TeamCardProps) {
   return (
-    <Card className="group flex flex-col h-full bg-surface-card hover:border-indigo-500/30 transition-colors">
+    <BorderGlow
+      borderRadius={24}
+      glowColor="250 85 75"
+      colors={['#6366f1', '#a855f7', '#ec4899', '#3b82f6']}
+      animated={true}
+      glowIntensity={1.2}
+      glowRadius={35}
+      backgroundColor="#0d0b1a"
+      className="group flex flex-col h-full transition-colors"
+    >
       <div className="p-6 flex flex-col items-center text-center space-y-4 h-full justify-between">
         
         {/* Avatar Image */}
@@ -101,6 +107,6 @@ export function TeamCard({ member }: TeamCardProps) {
         </div>
 
       </div>
-    </Card>
+    </BorderGlow>
   );
 }

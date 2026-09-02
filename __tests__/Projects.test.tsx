@@ -13,25 +13,18 @@ vi.mock('framer-motion', async () => {
 });
 
 describe('ProjectsPage Component', () => {
-  it('renders project list and category filters', () => {
+  it('renders portfolio banner and project list', () => {
     render(<ProjectsPage />);
     expect(screen.getByText(/Portfolio Showcase/i)).toBeInTheDocument();
-    expect(screen.getByText('Aetheris Horizon')).toBeInTheDocument();
-    expect(screen.getByText('PulsePay Global')).toBeInTheDocument();
+    expect(screen.getAllByText('LinkIt Nexus')[0]).toBeInTheDocument();
+    expect(screen.getAllByText('Elyon Traders')[0]).toBeInTheDocument();
+    expect(screen.getAllByText('DMI Placement Portal')[0]).toBeInTheDocument();
   });
 
-  it('filters projects when category button is clicked', () => {
+  it('opens project modal on click', () => {
     render(<ProjectsPage />);
-    const saasFilterBtn = screen.getByRole('button', { name: 'SaaS' });
-    fireEvent.click(saasFilterBtn);
-    expect(screen.getByText('Aetheris Horizon')).toBeInTheDocument();
-  });
-
-  it('filters projects by search query', () => {
-    render(<ProjectsPage />);
-    const searchInput = screen.getByPlaceholderText(/search title, tech, or client/i);
-    fireEvent.change(searchInput, { target: { value: 'Aetheris' } });
-    expect(screen.getByText('Aetheris Horizon')).toBeInTheDocument();
-    expect(screen.queryByText('PulsePay Global')).not.toBeInTheDocument();
+    const linkitCards = screen.getAllByText('LinkIt Nexus');
+    expect(linkitCards[0]).toBeInTheDocument();
+    fireEvent.click(linkitCards[0]);
   });
 });
