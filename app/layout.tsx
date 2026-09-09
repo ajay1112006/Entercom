@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   keywords: ['Next.js Agency', 'Web Design Studio', 'Motion Websites', 'React Engineering', 'Tailwind CSS', 'Vercel Deployment'],
   authors: [{ name: 'Entercom Studio' }],
   icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
   },
   openGraph: {
     title: 'Entercom — Bespoke Web Engineering Studio',
