@@ -18,10 +18,11 @@ describe('Navbar Component', () => {
     expect(screen.getAllByText('Contact')[0]).toBeInTheDocument();
   });
 
-  it('toggles mobile menu on button click', () => {
+  it('renders Start Coding button with redirect link', () => {
     render(<Navbar />);
-    const menuBtn = screen.getAllByLabelText(/toggle menu/i)[0];
-    expect(menuBtn).toBeInTheDocument();
-    fireEvent.click(menuBtn);
+    const startCodingBtn = screen.getAllByText('Start Coding')[0];
+    expect(startCodingBtn).toBeInTheDocument();
+    const link = startCodingBtn.closest('a');
+    expect(link).toHaveAttribute('href', 'https://code-cyan-psi.vercel.app/');
   });
 });

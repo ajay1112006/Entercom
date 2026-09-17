@@ -265,13 +265,18 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2"
           >
+            <a href="https://code-cyan-psi.vercel.app/">
+              <Button variant="glow" size="lg" icon={<Code2 className="w-4 h-4" />}>
+                Start Coding
+              </Button>
+            </a>
             <Link href="/contact">
-              <Button variant="glow" size="lg" icon={<ArrowRight className="w-4 h-4" />}>
+              <Button variant="outline" size="lg" icon={<ArrowRight className="w-4 h-4" />}>
                 Start Your Website Project
               </Button>
             </Link>
             <Link href="/projects">
-              <Button variant="outline" size="lg" icon={<MousePointer2 className="w-4 h-4" />}>
+              <Button variant="ghost" size="lg" icon={<MousePointer2 className="w-4 h-4" />}>
                 Explore Work
               </Button>
             </Link>
@@ -497,9 +502,14 @@ export default function HomePage() {
               <p className="text-white/70 text-base leading-relaxed">
                 Let&apos;s build a stunning, production-grade Next.js website that elevates your brand and outruns the competition.
               </p>
-              <div className="pt-2">
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://code-cyan-psi.vercel.app/">
+                  <Button variant="glow" size="lg" icon={<Code2 className="w-4 h-4" />}>
+                    Start Coding
+                  </Button>
+                </a>
                 <Link href="/contact">
-                  <Button variant="glow" size="lg" icon={<ArrowRight className="w-4 h-4" />}>
+                  <Button variant="outline" size="lg" icon={<ArrowRight className="w-4 h-4" />}>
                     Get a Proposal in 24 Hours
                   </Button>
                 </Link>

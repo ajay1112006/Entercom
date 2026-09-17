@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Code2 } from 'lucide-react';
 import { PillNav } from './PillNav';
 import { Button } from './ui/Button';
 
@@ -58,11 +58,24 @@ export function Navbar() {
           />
         </div>
 
-        {/* Right Corner: CTA Button */}
+        {/* Right Corner: CTA Buttons */}
         <div className="hidden md:flex items-center gap-3">
-          <Link href="/contact">
+          <a
+            href="https://code-cyan-psi.vercel.app/"
+            className="inline-flex items-center"
+          >
             <Button
               variant="glow"
+              size="sm"
+              className="text-xs font-mono font-semibold"
+              icon={<Code2 className="w-3.5 h-3.5" />}
+            >
+              Start Coding
+            </Button>
+          </a>
+          <Link href="/contact">
+            <Button
+              variant="outline"
               size="sm"
               className="text-xs font-mono font-semibold"
               icon={<ArrowUpRight className="w-3.5 h-3.5" />}
