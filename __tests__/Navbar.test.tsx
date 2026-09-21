@@ -18,11 +18,11 @@ describe('Navbar Component', () => {
     expect(screen.getAllByText('Contact')[0]).toBeInTheDocument();
   });
 
-  it('renders Start Coding button with redirect link', () => {
+  it('renders Start a Project CTA button', () => {
     render(<Navbar />);
-    const startCodingBtn = screen.getAllByText('Start Coding')[0];
-    expect(startCodingBtn).toBeInTheDocument();
-    const link = startCodingBtn.closest('a');
-    expect(link).toHaveAttribute('href', 'https://code-cyan-psi.vercel.app/');
+    const ctaBtn = screen.getAllByText('Start a Project')[0];
+    expect(ctaBtn).toBeInTheDocument();
+    const link = ctaBtn.closest('a');
+    expect(link).toHaveAttribute('href', '/contact');
   });
 });
